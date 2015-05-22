@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Hello Boulder!
+	form(action="/formSubmit", method="post")
+		input(name='email', placeholder='email...' type='email')
+		input(type='submit')
+	
+	ul
+		for user in emailsJade
+			li(class=user.useremail) User: #{user.useremail}
+			li= user.useremail.toUpperCase()
